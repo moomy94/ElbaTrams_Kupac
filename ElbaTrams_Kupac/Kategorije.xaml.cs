@@ -16,26 +16,18 @@ using System.Windows.Shapes;
 namespace ElbaTrams_Kupac
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Kategorije.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Kategorije : Page
     {
-        public MainWindow()
+        public Kategorije()
         {
             InitializeComponent();
-            MainButton.Visibility = Visibility.Visible;
         }
 
-        private void Screensaver(object sender, EventArgs e)
+        private void ToplaPica(object sender, EventArgs e)
         {
-            Panel.SetZIndex(MainButton, -1);
-            prikazMenija.Content = new Kategorije();
+            ostaliMeniji.Content = new ToplaPica();
         }
-
-        private void BackBotun(object sender, EventArgs e)
-        {
-            BackButton.Visibility = Visibility.Hidden;
-        }
-
     }
 }
