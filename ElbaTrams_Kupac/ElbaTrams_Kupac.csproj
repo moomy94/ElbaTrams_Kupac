@@ -60,9 +60,6 @@
     <Compile Include="GaziranaPica.xaml.cs">
       <DependentUpon>GaziranaPica.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Kategorije.xaml.cs">
-      <DependentUpon>Kategorije.xaml</DependentUpon>
-    </Compile>
     <Compile Include="NegaziranaPica.xaml.cs">
       <DependentUpon>NegaziranaPica.xaml</DependentUpon>
     </Compile>
@@ -74,10 +71,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GaziranaPica.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Kategorije.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -29,13 +29,34 @@ namespace ElbaTrams_Kupac
         private void Screensaver(object sender, EventArgs e)
         {
             Panel.SetZIndex(MainButton, -1);
-            prikazMenija.Content = new Kategorije();
+        }
+        private void ToplaPica(object sender, EventArgs e)
+        {
+            prikazMenija.Content = new ToplaPica();
+            Panel.SetZIndex(prikazMenija, 1);
+        }
+
+        private void GaziranaPica(object sender, EventArgs e)
+        {
+            prikazMenija.Content = new GaziranaPica();
+            Panel.SetZIndex(prikazMenija, 1);
+        }
+
+        private void AlkoholnaPica(object sender, EventArgs e)
+        {
+            prikazMenija.Content = new AlkoholnaPica();
+            Panel.SetZIndex(prikazMenija, 1);
+        }
+
+        private void NegaziranaPica(object sender, EventArgs e)
+        {
+            prikazMenija.Content = new NegaziranaPica();
+            Panel.SetZIndex(prikazMenija, 1);
         }
 
         private void BackBotun(object sender, EventArgs e)
         {
-            BackButton.Visibility = Visibility.Hidden;
+            Panel.SetZIndex(prikazMenija, -1);
         }
-
     }
 }
