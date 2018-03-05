@@ -24,39 +24,60 @@ namespace ElbaTrams_Kupac
         {
             InitializeComponent();
             MainButton.Visibility = Visibility.Visible;
+            BackButton.Visibility = Visibility.Hidden;
+            sidemenuKategorije.Visibility = Visibility.Hidden;
         }
 
         private void Screensaver(object sender, EventArgs e)
         {
             Panel.SetZIndex(MainButton, -1);
+            BackButton.Visibility = Visibility.Hidden;
+
         }
         private void ToplaPica(object sender, EventArgs e)
         {
             prikazMenija.Content = new ToplaPica();
             Panel.SetZIndex(prikazMenija, 1);
+            BackButton.Visibility = Visibility.Visible;
+            sidemenuKategorije.Visibility = Visibility.Visible;
         }
 
         private void GaziranaPica(object sender, EventArgs e)
         {
             prikazMenija.Content = new GaziranaPica();
             Panel.SetZIndex(prikazMenija, 1);
+            BackButton.Visibility = Visibility.Visible;
+            sidemenuKategorije.Visibility = Visibility.Visible;
         }
 
         private void AlkoholnaPica(object sender, EventArgs e)
         {
             prikazMenija.Content = new AlkoholnaPica();
             Panel.SetZIndex(prikazMenija, 1);
+            BackButton.Visibility = Visibility.Visible;
+            sidemenuKategorije.Visibility = Visibility.Visible;
         }
 
         private void NegaziranaPica(object sender, EventArgs e)
         {
             prikazMenija.Content = new NegaziranaPica();
             Panel.SetZIndex(prikazMenija, 1);
+            BackButton.Visibility = Visibility.Visible;
+            sidemenuKategorije.Visibility = Visibility.Visible;
         }
 
         private void BackBotun(object sender, EventArgs e)
         {
             Panel.SetZIndex(prikazMenija, -1);
+            BackButton.Visibility = Visibility.Hidden;
+            if(kategorijePica.Visibility == Visibility.Visible)
+            {
+                sidemenuKategorije.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                sidemenuKategorije.Visibility = Visibility.Visible;
+            }
         }
     }
 }

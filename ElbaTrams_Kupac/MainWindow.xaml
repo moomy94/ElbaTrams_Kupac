@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ElbaTrams_Kupac"
         mc:Ignorable="d"
-        Title="MainWindow" Height="480" Width="800">
+        Title="MainWindow" Height="480" Width="800"
+        WindowStyle="None" ResizeMode="NoResize">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -162,7 +163,7 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid MinWidth="800" MinHeight="445" Margin="0" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+    <Grid MinWidth="800" MinHeight="473" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Button x:Name="MainButton" MinWidth="800" MinHeight="482" Padding="-1,1,1,1"  Margin="0" Panel.ZIndex="500" Height="50" Width="100" Grid.RowSpan="6" Grid.ColumnSpan="9" Style="{DynamicResource ButtonStyle6}" Visibility="Hidden">
             <Button.Triggers>
                 <EventTrigger RoutedEvent="Button.Click">
@@ -245,23 +246,23 @@
 
         <Frame x:Name="prikazMenija" Grid.Column="1" Grid.RowSpan="4" Panel.ZIndex="1" NavigationUIVisibility="Hidden" />
 
-        <StackPanel x:Name="sidemenuKategorije" Grid.Row="1" Panel.ZIndex="2" VerticalAlignment="Center" Visibility="Hidden">
-            <Menu VerticalAlignment="Center" Margin="0,20,0,0" Foreground="Black">
-                <MenuItem Header="Topla pića" Foreground="Black">
+        <StackPanel x:Name="sidemenuKategorije" Grid.Row="1" Panel.ZIndex="2" VerticalAlignment="Center">
+            <Menu Margin="0,20,0,0" Foreground="Black" VerticalContentAlignment="Top" MinHeight="25">
+                <MenuItem Header="Topla pića" Foreground="Black" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0" MinWidth="160" FontFamily="Sitka Small" MinHeight="25">
                     <MenuItem Header="Kave"/>
                     <MenuItem Header="Čaj"/>
                     <MenuItem Header="Čokolada"/>
                 </MenuItem>
             </Menu>
-            <Menu Margin="0,20,0,0">
-                <MenuItem Header="Gazirana pića">
+            <Menu Margin="0,20,0,0" VerticalContentAlignment="Top">
+                <MenuItem Header="Gazirana pića" FontFamily="Sitka Small" MinWidth="160" MinHeight="25">
                     <MenuItem Header="Voćna gazirana pića"/>
                     <MenuItem Header="Energetska pića"/>
                     <MenuItem Header="Gazirana voda"/>
                 </MenuItem>
             </Menu>
-            <Menu Margin="0,20,0,0">
-                <MenuItem Header="Alkoholna pića">
+            <Menu Margin="0,20,0,0" VerticalContentAlignment="Top">
+                <MenuItem Header="Alkoholna pića" FontFamily="Sitka Small" MinWidth="160" MinHeight="22">
                     <MenuItem Header="Pive"/>
                     <MenuItem Header="Vina"/>
                     <MenuItem Header="Žestoka pića"/>
@@ -269,7 +270,7 @@
                 </MenuItem>
             </Menu>
             <Menu Margin="0,20,0,0">
-                <MenuItem Header="Negazirana pića">
+                <MenuItem Header="Negazirana pića" FontFamily="Sitka Small" MinWidth="160" MinHeight="23">
                     <MenuItem Header="Sokovi"/>
                     <MenuItem Header="Voda"/>
                     <MenuItem Header="Prirodni sokovi"/>
@@ -277,6 +278,7 @@
                 </MenuItem>
             </Menu>
         </StackPanel>
+       
         <Button x:Name="BackButton" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Bottom" Height="25" Width="80" Panel.ZIndex="1" Style="{DynamicResource ButtonStyle5}" Foreground="#FFA1B6F3" FontWeight="Bold" BorderBrush="#FF637CC3" Background="{x:Null}">
             <Button.Triggers>
                 <EventTrigger RoutedEvent="Button.Click">
@@ -292,26 +294,26 @@
                 <TextBlock Text="Back" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
             </StackPanel>
         </Button>
+        
+        <Rectangle VerticalAlignment="Stretch" x:Name="sidemenuBoja" Grid.Column="0" Grid.RowSpan="4" Margin="0" Fill="#FF0C1A43"/>
+        <Rectangle VerticalAlignment="Stretch" x:Name="artikliBoja" Grid.Column="1" Grid.RowSpan="4" Margin="0" Fill="#FF4768C6"/>
+        <Rectangle VerticalAlignment="Stretch" x:Name="dodavanjeBoja" Grid.Column="4" Grid.RowSpan="4" Fill="#FF4FACB4" Margin="0"/>
+        <Rectangle VerticalAlignment="Stretch" x:Name="kolicinaBoja" Grid.Column="3" Grid.RowSpan="4" Fill="#FF4FACB4" Margin="0"/>
+        <Rectangle VerticalAlignment="Stretch" x:Name="artikliRacunBoja" Grid.Column="2" Grid.RowSpan="4" Margin="0" Fill="#FF4FACB4"/>
+        
+        <TextBlock x:Name="totalracun" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Text="Total:" HorizontalAlignment="Right" FontFamily="Sitka Small" FontSize="18" Foreground="#FF172B66" Margin="0" Height="22" Width="53"/>
         <TextBlock x:Name="narudzba" Grid.Column="2" VerticalAlignment="Bottom" Text="Narudzba" Margin="0" Foreground="#FF213C89" Panel.ZIndex="2" HorizontalAlignment="Center" FontSize="22" FontFamily="Sitka Small" Height="28" Width="108"/>
         <TextBlock x:Name="broj" Grid.Column="3" Panel.ZIndex="1" Foreground="#FF213C89" Text="#" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="29" Margin="0" Width="14"/>
-        <Rectangle VerticalAlignment="Stretch" x:Name="sidemenuBoja" Grid.Column="0" Grid.RowSpan="4" Margin="0" Fill="#FF0C1A43"/>
-        <Rectangle VerticalAlignment="Stretch" x:Name="artikliBoja" Grid.Column="1" Grid.RowSpan="4" Margin="0">
-            <Rectangle.Fill>
-                <SolidColorBrush Color="#4768c6"/>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle VerticalAlignment="Stretch" x:Name="artikliRacunBoja" Grid.Column="2" Grid.RowSpan="4" Margin="0" Fill="#FF4FACB4"/>
-        <TextBlock x:Name="totalracun" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Text="Total:" HorizontalAlignment="Right" FontFamily="Sitka Small" FontSize="18" Foreground="#FF172B66" Margin="0" Height="22" Width="53"/>
-        <Button x:Name="naruci" Grid.Row="3" Grid.Column="2" Content="NARUCI">
-
-        </Button>
+        
+        <Button x:Name="naruci" Grid.Row="3" Grid.Column="2" Content="NARUCI"/>
         <Button x:Name="odustani" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" Panel.ZIndex="1" Content="ODUSTANI"/>
+        
         <StackPanel x:Name="totalcijena" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="5" Orientation="Horizontal" Height="30" Margin="3,7,3,3" Width="94">
             <TextBox x:Name="totalCijena" MinWidth="90" Background="{x:Null}" BorderBrush="{x:Null}" MinHeight="30" FontSize="20" FontFamily="Sitka Small" SelectionBrush="{x:Null}" Foreground="#FF172B66" Focusable="False"/>
         </StackPanel>
-        <Rectangle VerticalAlignment="Stretch" x:Name="kolicinaBoja" Grid.Column="3" Grid.RowSpan="4" Fill="#FF4FACB4" Margin="0"/>
-        <Rectangle VerticalAlignment="Stretch" x:Name="dodavanjeBoja" Grid.Column="4" Grid.RowSpan="4" Fill="#FF4FACB4" Margin="0"/>
 
+        
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition x:Name="sidemenu" Width="160*"/>
             <ColumnDefinition x:Name="artikli" Width="400*"/>
@@ -319,9 +321,8 @@
             <ColumnDefinition x:Name="kolicina" Width="50*"/>
             <ColumnDefinition x:Name="dodavanje" Width="50*"/>
         </Grid.ColumnDefinitions>
-
         <Grid.RowDefinitions>
-            <RowDefinition Height="30*"/>
+            <RowDefinition Height="35*"/>
             <RowDefinition x:Name="Total" Height="330*"/>
             <RowDefinition Height="40*"/>
             <RowDefinition Height="50*"/>
