@@ -36,6 +36,7 @@ namespace ElbaTrams_Kupac
         }
         private void ToplaPica(object sender, EventArgs e)
         {
+            
             prikazMenija.Content = new ToplaPica();
             Panel.SetZIndex(prikazMenija, 1);
             BackButton.Visibility = Visibility.Visible;

@@ -9,12 +9,12 @@
       Title="ToplaPica">
 
     <Grid Background="#FF89449C">
-        <ListView x:Name="toplaPicaCjenik" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF042271" HorizontalAlignment="Center">
+        <ListView ScrollViewer.HorizontalScrollBarVisibility="Hidden" x:Name="toplaPicaCjenik" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFE6C913" HorizontalAlignment="Center">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Drink" Width="150" DisplayMemberBinding="{Binding Drink}" />
+                    <GridViewColumn Header="Drink" Width="146" DisplayMemberBinding="{Binding Drink}" />
                     <GridViewColumn Header="Price" Width="50" DisplayMemberBinding="{Binding Price}" />
-                    <GridViewColumn Header="Drink" Width="150" DisplayMemberBinding="{Binding Drink}" />
+                    <GridViewColumn Header="Drink" Width="146" DisplayMemberBinding="{Binding Drink}" />
                     <GridViewColumn Header="Price" Width="50" DisplayMemberBinding="{Binding Price}" />
                 </GridView>
             </ListView.View>
