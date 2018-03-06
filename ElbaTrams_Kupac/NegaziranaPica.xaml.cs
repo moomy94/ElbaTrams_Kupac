@@ -23,6 +23,18 @@ namespace ElbaTrams_Kupac
         public NegaziranaPica()
         {
             InitializeComponent();
+            List<CjenikNegazirano> items = new List<CjenikNegazirano>();
+            items.Add(new CjenikNegazirano() { Drink = "Ledeni čaj", Price = 15 });
+            items.Add(new CjenikNegazirano() { Drink = "Juicy sokovi", Price = 10 });
+            items.Add(new CjenikNegazirano() { Drink = "ljimunad", Price = 25 });
+            negaziranaCjenik.ItemsSource = items;
+        }
+        public class CjenikNegazirano
+        {
+            public string Drink { get; set; }
+
+            public int Price { get; set; }
+
         }
     }
 }

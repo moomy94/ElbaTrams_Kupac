@@ -9,7 +9,7 @@
       Title="AlkoholnaPica">
 
     <Grid Background="#FF4AC1A7">
-        <ListView Name="alkoholCjenik" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF042271">
+        <ListView Name="alkoholCjenik" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF042271" HorizontalAlignment="Center">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Drink" Width="150" DisplayMemberBinding="{Binding Drink}" />

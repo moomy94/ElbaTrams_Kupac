@@ -9,6 +9,15 @@
       Title="GaziranaPica">
 
     <Grid Background="#FFB48E37">
-        
+        <ListView x:Name="gaziranaCjenik" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF042271" HorizontalAlignment="Center">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Drink" Width="150" DisplayMemberBinding="{Binding Drink}" />
+                    <GridViewColumn Header="Price" Width="50" DisplayMemberBinding="{Binding Price}" />
+                    <GridViewColumn Header="Drink" Width="150" DisplayMemberBinding="{Binding Drink}" />
+                    <GridViewColumn Header="Price" Width="50" DisplayMemberBinding="{Binding Price}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Page>

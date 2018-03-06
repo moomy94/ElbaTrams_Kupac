@@ -23,6 +23,18 @@ namespace ElbaTrams_Kupac
         public GaziranaPica()
         {
             InitializeComponent();
+            List<CjenikGazirano> items = new List<CjenikGazirano>();
+            items.Add(new CjenikGazirano() { Drink = "Coca Cola", Price = 15 });
+            items.Add(new CjenikGazirano() { Drink = "Fanta", Price = 15 });
+            items.Add(new CjenikGazirano() { Drink = "Sprite", Price = 15 });
+            gaziranaCjenik.ItemsSource = items;
+        }
+        public class CjenikGazirano
+        {
+            public string Drink { get; set; }
+
+            public int Price { get; set; }
+
         }
     }
 }
